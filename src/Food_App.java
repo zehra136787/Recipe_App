@@ -65,32 +65,35 @@ public class Food_App extends JFrame {
 		lbl_baslık.setForeground(new Color(138, 109, 79));
 		lbl_baslık.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_baslık.setFont(new Font("Imprint MT Shadow", Font.BOLD | Font.ITALIC, 34));
-		lbl_baslık.setBounds(311, 72, 236, 66);
+		lbl_baslık.setBounds(309, 100, 236, 66);
 		contentPane.add(lbl_baslık);
 		
 		JButton btn_bul = new JButton("Tarif Bul");
 		btn_bul.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+		     Find_Recipe_Tab find_racipe_frame = new Find_Recipe_Tab();
+		     find_racipe_frame.setVisible(true);
+		     setVisible(false);
 			}
 		});
 		btn_bul.setBackground(new Color(138, 109, 79));
 		btn_bul.setForeground(new Color(255, 255, 255));
 		btn_bul.setFont(new Font("Imprint MT Shadow", Font.BOLD | Font.ITALIC, 28));
-		btn_bul.setBounds(350, 166, 173, 66);
+		btn_bul.setBounds(350, 204, 173, 66);
 		contentPane.add(btn_bul);
 		
 		JButton btn_ekle = new JButton("Tarif Ekle");
+		btn_ekle.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Add_Recipe_Tap add_recipe_frame = new Add_Recipe_Tap();
+				add_recipe_frame.setVisible(true);
+				setVisible(false);
+			}
+		});
 		btn_ekle.setForeground(Color.WHITE);
 		btn_ekle.setFont(new Font("Imprint MT Shadow", Font.BOLD | Font.ITALIC, 28));
 		btn_ekle.setBackground(new Color(138, 109, 79));
-		btn_ekle.setBounds(350, 256, 173, 66);
+		btn_ekle.setBounds(350, 320, 173, 66);
 		contentPane.add(btn_ekle);
-		
-		JButton btn_favoriler = new JButton("Favoriler");
-		btn_favoriler.setForeground(Color.WHITE);
-		btn_favoriler.setFont(new Font("Imprint MT Shadow", Font.BOLD | Font.ITALIC, 28));
-		btn_favoriler.setBackground(new Color(138, 109, 79));
-		btn_favoriler.setBounds(350, 343, 173, 66);
-		contentPane.add(btn_favoriler);
 	}
 }
